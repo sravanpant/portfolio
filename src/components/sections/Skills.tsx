@@ -61,7 +61,7 @@ const SkillIcon = ({ Icon, name }: { Icon: IconType; name: string }) => (
   <motion.div
     whileHover={{ scale: 1.1 }}
     className={cn(
-      "flex flex-col items-center gap-2",
+      "flex flex-col items-center justify-between gap-2",
       "transition-colors duration-200",
       "group"
     )}
@@ -123,16 +123,14 @@ const Skills = () => {
           transition={{ duration: 0.5 }}
         >
           <GlassCard className="p-8">
-            <div className="grid grid-cols-2 md:grid-cols-8 gap-8">
+            <div className="grid grid-cols-3 md:grid-cols-8 gap-8">
               {skills.map((skill, index) => (
                 <div key={index}>
-                  <div className="grid grid-cols-2 gap-4">
-                    <SkillIcon
-                      key={skill.name}
-                      Icon={skill.icon}
-                      name={skill.name}
-                    />
-                  </div>
+                  <SkillIcon
+                    key={skill.name}
+                    Icon={skill.icon}
+                    name={skill.name}
+                  />
                 </div>
               ))}
             </div>

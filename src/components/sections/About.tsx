@@ -125,13 +125,13 @@ const About = () => {
 
               <p className="text-blue-600 dark:text-blue-300">
                 When I&apos;m not coding, you&apos;ll find me:
-                <ul className="list-disc pl-8">
-                  <li> Exploring new tech trends</li>
-                  <li> Contributing to open-source projects</li>
-                  <li> Playing chess and sudoky</li>
-                  <li> Reading Books</li>
-                </ul>
               </p>
+              <ul className="list-disc pl-8 text-blue-600 dark:text-blue-300">
+                <li> Exploring new tech trends</li>
+                <li> Contributing to open-source projects</li>
+                <li> Playing chess and sudoky</li>
+                <li> Reading Books</li>
+              </ul>
             </div>
           </motion.div>
         </div>

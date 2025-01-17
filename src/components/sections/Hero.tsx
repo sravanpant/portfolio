@@ -9,6 +9,7 @@ import {
   SiTailwindcss,
   SiTypescript,
 } from "react-icons/si";
+import Link from "next/link";
 // import { cn } from "@/lib/utils";
 
 export default function Hero() {
@@ -49,21 +50,30 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row justify-center gap-4 mb-16"
           >
-            <Button
-              size="lg"
-              className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:ring-2 text-white"
+            <Link href="/projects">
+              <Button
+                size="lg"
+                className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:ring-2 text-white"
+              >
+                View Projects
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+            <Link
+              href={
+                "https://drive.google.com/file/d/1RrQNIbdoYUfom_ikLYqkLhxTK-1Gf_dm/view"
+              }
+              target="_blank"
             >
-              View Projects
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400"
-            >
-              Download CV
-              <Download className="ml-2 h-4 w-4" />
-            </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400"
+              >
+                Download CV
+                <Download className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </motion.div>
 
           <motion.div

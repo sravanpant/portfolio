@@ -134,3 +134,17 @@ html {
     @apply text-blue-400 dark:text-blue-400;
   }
 }
+
+.search-glass {
+  @apply backdrop-blur-md bg-white/5 dark:bg-blue-950/5 border border-white/20 dark:border-blue-900/20;
+}
+
+.search-container {
+  @apply relative overflow-hidden;
+}
+
+.search-container::before {
+  content: "";
+  @apply absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-blue-500/10 dark:from-blue-400/10 dark:to-blue-400/10;
+  @apply opacity-50;
+}

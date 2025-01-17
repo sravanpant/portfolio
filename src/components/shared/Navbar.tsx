@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { GlassCard } from "@/components/ui/glass-card";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,11 +18,11 @@ const Navbar = () => {
   // const blur = useTransform(scrollY, [0, 50], [8, 12]);
 
   const navItems = [
-    { name: "Home", href: "#home" },
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "About", href: "/#about" },
+    { name: "Skills", href: "/#skills" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -56,12 +57,12 @@ const Navbar = () => {
               animate={{ opacity: 1 }}
               className="flex-shrink-0"
             >
-              <a
-                href="#home"
+              <Link
+                href="/"
                 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-500 hover:opacity-80 transition-opacity"
               >
                 Sravan Pant
-              </a>
+              </Link>
             </motion.div>
 
             {/* Desktop navigation */}
@@ -72,7 +73,7 @@ const Navbar = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <a
+                  <Link
                     href={item.href}
                     className={cn(
                       "px-4 py-2 rounded-lg text-sm font-medium",
@@ -83,7 +84,7 @@ const Navbar = () => {
                     )}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 </motion.div>
               ))}
               <div className="pl-2">

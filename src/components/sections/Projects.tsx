@@ -3,8 +3,9 @@
 import { motion } from "framer-motion";
 import { GlassCard } from "@/components/ui/glass-card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ArrowRight, ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const projects = [
   {
@@ -75,6 +76,7 @@ const Projects = () => {
                     src={project.image}
                     alt={project.title}
                     fill
+                    
                     className="object-cover"
                   />
                 </div>
@@ -131,6 +133,17 @@ const Projects = () => {
               </GlassCard>
             </motion.div>
           ))}
+        </div>
+        <div className="flex justify-center mt-12">
+          <Link href="/projects">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-blue-600 to-cyan-600 hover:ring-2 text-white"
+            >
+              View Projects
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>

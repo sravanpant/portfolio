@@ -6,7 +6,6 @@ import Navbar from "@/components/shared/Navbar";
 import Footer from "@/components/shared/Footer";
 import PageTransition from "@/components/PageTransistion";
 import { Background } from "@/components/shared/Background";
-// import { Highlight } from "@/components/micro-interactions";
 
 const inter = Inter({ subsets: ["latin"] });
 

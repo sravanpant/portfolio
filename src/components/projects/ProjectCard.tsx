@@ -48,22 +48,24 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             ))}
           </div>
           <div className="flex gap-4">
-            <Button
-              variant="outline"
-              size="sm"
-              className="gap-2 border-blue-300 dark:border-blue-700
+            {project.liveUrl && (
+              <Button
+                variant="outline"
+                size="sm"
+                className="gap-2 border-blue-300 dark:border-blue-700
                 hover:bg-blue-100 dark:hover:bg-blue-900/50"
-              asChild
-            >
-              <Link
-                href={`${project.liveUrl}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                asChild
               >
-                <ExternalLink className="w-4 h-4" />
-                Live Demo
-              </Link>
-            </Button>
+                <Link
+                  href={`${project.liveUrl}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <ExternalLink className="w-4 h-4" />
+                  Live Demo
+                </Link>
+              </Button>
+            )}
             <Button
               variant="outline"
               size="sm"

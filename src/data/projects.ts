@@ -2,6 +2,15 @@ import { Project } from "@/types/projects";
 
 export const allProjects: Project[] = [
   {
+    title: "Wikipedia Web Scraper",
+    description:
+      "Web scraping is to gather valuable data from websites in a structured and organized format.",
+    image:
+      "https://i2f1nqgdbe.ufs.sh/f/0ACJXVZiq6WuaVGHqkbgRfYsk4qV8vpnSx71NtlQcFzOTGdX",
+    tags: ["Python", "Pandas", "Numpy", "Beautiful Soup", "Bash", "Pytest"],
+    githubUrl: "https://github.com/sravanpant/Web_Scraper_wikipedia",
+  },
+  {
     title: "Dropbox Clone",
     description:
       "Built a file-sharing app using ReactJS, NextJS for frontend and Firebase for secure storage.",
